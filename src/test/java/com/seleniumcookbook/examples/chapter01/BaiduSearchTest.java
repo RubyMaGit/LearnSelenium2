@@ -1,5 +1,7 @@
 package com.seleniumcookbook.examples.chapter01;
 
+import java.util.List;
+
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -48,9 +50,25 @@ public class BaiduSearchTest {
 	    });
 
 	    //Check Result
-	    assertEquals("selenium testing tools cookbook_百度搜索",
+	    assertEquals("Selenium testing tools cookbook_百度搜索",
 	        driver.getTitle());
 	  }
+	  
+	  @Test
+	  public void testFindElements() {
+		    //Get all the links displayed on Page
+		    List<WebElement> links = driver.findElements(By.tagName("a"));
+
+		    //Verify there are four links displayed on the page
+		    assertEquals(32, links.size());
+
+		    //Iterate though the list of links and print
+		    //target for each link
+		    for(WebElement link : links) {
+		        System.out.println(link.getAttribute("href"));
+		    }
+		}
+
 
 	  @After
 	  public void tearDown() throws Exception {
