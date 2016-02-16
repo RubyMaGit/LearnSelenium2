@@ -16,7 +16,7 @@ public class BaiduSearchTest {
 	  @Before
 	  public void setUp() {
 	    System.setProperty("webdriver.chrome.driver",
-	        "./src/test/resources/drivers/chromedriver.exe");
+	        "./src/test/resources/chromedriver.exe");
 
 	    // Launch Chrome
 	    driver = new ChromeDriver();
@@ -47,6 +47,7 @@ public class BaiduSearchTest {
 	      }
 	    });
 
+	    //Check Result
 	    assertEquals("selenium testing tools cookbook_百度搜索",
 	        driver.getTitle());
 	  }
