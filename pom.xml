@@ -3,23 +3,27 @@
   <groupId>com.secookbook.examples</groupId>
   <artifactId>SeleniumCookbook</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  
   <dependencies>
+    
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
       <artifactId>selenium-java</artifactId>
       <version>2.52.0</version>
       <scope>test</scope>
     </dependency>
+    
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>4.12</version>
       <scope>test</scope>
     </dependency>
-    </dependencies>
-    <Properties>
-        <Project.build.sourceEncoding>UTF-8</Project.build.sourceEncoding>
-        <Project.reporting.outputEncoding>UTF-8</Project.reporting.outputEncoding>
-    </Properties>
-    
+   
+   </dependencies>  
+   
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
 </project>
